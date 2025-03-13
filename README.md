@@ -29,8 +29,7 @@ The dataset comprises the following key variables:
 - **UnitPrice**: Price of the product per unit in GBP.
 - **CustomerID**: Unique identifier for each customer.
 - **Country**: Customer location.
-
-![1732803067129](https://github.com/user-attachments/assets/de9b4856-9892-47a8-b246-6150ae999804)
+![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
 
 
 ## Insights Deep Dive
@@ -40,11 +39,12 @@ Most purchased items were small, low-cost gifts, indicating a gifting-oriented b
 
 ### Seasonality
 Sales spiked in **November and December**, aligning with holiday shopping trends.
-![1732804207628](https://github.com/user-attachments/assets/d2c6fdbf-0aef-44e9-a2b4-514c7e45aec6)
+
 ### Customer Segmentation
 - **20%** of customers accounted for over **80%** of total sales.
 - Emphasized the importance of loyalty programs for high-value customers.
-![1732803755513](https://github.com/user-attachments/assets/65bfde58-05d0-4f57-b737-ad14b28583b7)
+
+![output](https://github.com/user-attachments/assets/78dbc406-e7b8-426f-b96c-2d99f56eb8fa)
 
 ### Geographic Distribution
 - The majority of revenue was generated in the **UK**.
