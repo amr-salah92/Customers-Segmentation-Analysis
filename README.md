@@ -177,9 +177,7 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 **Tools**:  
 - **Python**: Pandas (cleaning), Scikit-learn (K-Means), Matplotlib/Seaborn (visualization).
   
-[Uploa[InternetShortcut]
-URL=https://github.com/amr-salah92/Customers-Segmentation-Analysis/blob/main/online%20retail.ipynb
-ding Customers-Segmentation-Analysis-online retail.ipynb at main · amr-salah92-Customers-Segmentation-Analysis.url…]()
+[code](https://github.com/amr-salah92/Customers-Segmentation-Analysis/blob/main/online%20retail.ipynb)
 
 
 
