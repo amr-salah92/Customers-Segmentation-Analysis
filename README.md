@@ -37,9 +37,6 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 - **80% of transactions** originate from the UK.  
 - Columns: `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`.  
 
-![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
-
-
 ---
 
 ## Data Collection and Sources  
@@ -62,6 +59,9 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 | `UnitPrice`   | Price per unit                   | Zero and negative prices removed              |
 | `CustomerID`  | Anonymized customer identifier   | 37k unique IDs, \~25% missing entries dropped |
 | `Country`     | Customer's country of residence  | 38 countries; UK dominates with \~80% of data |
+
+
+![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
 
 ---
 
