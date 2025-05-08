@@ -37,6 +37,63 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 - **80% of transactions** originate from the UK.  
 - Columns: `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`.  
 
+![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
+
+
+---
+
+## Data Collection and Sources  
+- **Source**: Internal ERP database (`online_retail.xlsx`, Sheet 0).  
+- **Scope**: Transactions from **2010–2011**, excluding external APIs.  
+
+
+---
+
+## Data Structure & Initial Checks  
+**Main Table**: `df` (540k rows × 8 columns)  
+
+| Column         | Description                           | Key Insights                          |  
+|----------------|---------------------------------------|---------------------------------------|  
+| `InvoiceNo`    | Transaction identifier                | 28k unique invoices                   |  
+| `CustomerID`   | Anonymized customer identifier        | 37k unique customers (25% missing)    |  
+| `Quantity`     | Units sold                            | Filtered to positive values only      |  
+| `UnitPrice`    | Price per unit                        | Removed zero/negative entries         |  
+
+---
+
+## Formal Data Governance  
+1. **Missing Values**:  
+   - **25% missing `CustomerID`**: Rows excluded to focus on identifiable customers.  
+2. **Data Validity**:  
+   - Filtered out **negative quantities** (returns) and **zero/negative prices**.  
+
+---
+
+## Regulatory Reporting  
+- **GDPR Compliance**: `CustomerID` anonymized; no PII used.  
+- **Financial Compliance**: Returns (negative quantities) excluded from revenue calculations.  
+
+---
+
+## Methodology  
+1. **Data Cleaning**:  
+   - Removed invalid entries (e.g., missing `CustomerID`, negative values).  
+2. **RFM Scoring**:  
+   - **Recency**: Days since last purchase.  
+   - **Frequency**: Total transactions per customer.  
+   - **Monetary**: Total spend per customer.  
+3. **Clustering**:  
+   - Standardized RFM scores using `StandardScaler`.  
+   - Applied **K-Means (k=4)** validated by silhouette analysis.  
+
+---
+
+## Documenting Issues  
+| Table | Column      | Issue                      | Magnitude | Solvable | Resolution                     |  
+|-------|-------------|----------------------------|-----------|----------|--------------------------------|  
+| `df`  | `CustomerID`| 25% missing                | High      | Yes      | Excluded rows                  |  
+| `df`  | `Quantity`  | Negative values (returns)  | Medium    | Yes      | Filtered out                   |  
+| `df`  | `UnitPrice` | Zero/negative prices       | Low       | Yes      | Removed invalid entries        |  
 
 ---
 
@@ -69,72 +126,12 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 
 ![output](https://github.com/user-attachments/assets/78dbc406-e7b8-426f-b96c-2d99f56eb8fa)
 
-
----
-
-## Data Collection and Sources  
-- **Source**: Internal ERP database (`online_retail.xlsx`, Sheet 0).  
-- **Scope**: Transactions from **2010–2011**, excluding external APIs.  
-
----
-
-## Formal Data Governance  
-1. **Missing Values**:  
-   - **25% missing `CustomerID`**: Rows excluded to focus on identifiable customers.  
-2. **Data Validity**:  
-   - Filtered out **negative quantities** (returns) and **zero/negative prices**.  
-
----
-
-## Regulatory Reporting  
-- **GDPR Compliance**: `CustomerID` anonymized; no PII used.  
-- **Financial Compliance**: Returns (negative quantities) excluded from revenue calculations.  
-
----
-
-## Methodology  
-1. **Data Cleaning**:  
-   - Removed invalid entries (e.g., missing `CustomerID`, negative values).  
-2. **RFM Scoring**:  
-   - **Recency**: Days since last purchase.  
-   - **Frequency**: Total transactions per customer.  
-   - **Monetary**: Total spend per customer.  
-3. **Clustering**:  
-   - Standardized RFM scores using `StandardScaler`.  
-   - Applied **K-Means (k=4)** validated by silhouette analysis.  
-
----
-
-## Data Structure & Initial Checks  
-**Main Table**: `df` (540k rows × 8 columns)  
-
-| Column         | Description                           | Key Insights                          |  
-|----------------|---------------------------------------|---------------------------------------|  
-| `InvoiceNo`    | Transaction identifier                | 28k unique invoices                   |  
-| `CustomerID`   | Anonymized customer identifier        | 37k unique customers (25% missing)    |  
-| `Quantity`     | Units sold                            | Filtered to positive values only      |  
-| `UnitPrice`    | Price per unit                        | Removed zero/negative entries         |  
-
-
-![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
-
----
-
-## Documenting Issues  
-| Table | Column      | Issue                      | Magnitude | Solvable | Resolution                     |  
-|-------|-------------|----------------------------|-----------|----------|--------------------------------|  
-| `df`  | `CustomerID`| 25% missing                | High      | Yes      | Excluded rows                  |  
-| `df`  | `Quantity`  | Negative values (returns)  | Medium    | Yes      | Filtered out                   |  
-| `df`  | `UnitPrice` | Zero/negative prices       | Low       | Yes      | Removed invalid entries        |  
-
 ---
 
 ## Executive Summary *(For a Marketing Manager)*  
 1. **Top 10% of Customers** drive **50% of revenue** — prioritize retention.  
 2. **40% of Customers** are inactive — launch reactivation campaigns.  
 3. **Germany** shows untapped potential with higher average order value.  
-
-
 
 ---
 
