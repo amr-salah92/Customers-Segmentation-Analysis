@@ -1,9 +1,3 @@
-
-![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
-
-
-![output](https://github.com/user-attachments/assets/78dbc406-e7b8-426f-b96c-2d99f56eb8fa)
-
 # Online Retail - Customer Segmentation Analysis using RFM and Clustering
 
 ---
@@ -43,6 +37,7 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 - **80% of transactions** originate from the UK.  
 - Columns: `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`.  
 
+
 ---
 
 ## Project Goals  
@@ -69,6 +64,11 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 | 1       | **High Frequency, Low Spend**    | Upsell/cross-sell bundles              |  
 | 2       | **Premium, Loyal**               | VIP loyalty programs                   |  
 | 3       | **Recent, Low Engagement**       | Welcome offers to boost retention      |  
+
+
+
+![output](https://github.com/user-attachments/assets/78dbc406-e7b8-426f-b96c-2d99f56eb8fa)
+
 
 ---
 
@@ -115,6 +115,9 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 | `Quantity`     | Units sold                            | Filtered to positive values only      |  
 | `UnitPrice`    | Price per unit                        | Removed zero/negative entries         |  
 
+
+![1732803067118](https://github.com/user-attachments/assets/07b6cc0b-e5b6-42d9-89e3-0f8bfe7a9e39)
+
 ---
 
 ## Documenting Issues  
@@ -131,7 +134,7 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 2. **40% of Customers** are inactive — launch reactivation campaigns.  
 3. **Germany** shows untapped potential with higher average order value.  
 
-![Monthly Sales Trend](https://via.placeholder.com/600x300?text=Revenue+by+Customer+Segment)  
+
 
 ---
 
@@ -174,12 +177,7 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 **Tools**:  
 - **Python**: Pandas (cleaning), Scikit-learn (K-Means), Matplotlib/Seaborn (visualization).  
 - **SQL**: Filtering anomalies (e.g., `WHERE Quantity > 0`).  
-- **Tableau**: Interactive dashboards for stakeholder access.  
-
-**Artifacts**:  
-- [Data Cleaning SQL Queries](#)  
-- [Jupyter Notebook](#)  
-- [Tableau Dashboard](#)  
+  
 
 ---
 
@@ -188,6 +186,3 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 2. **Partial December 2011 Data**: Seasonal trends may be underrepresented.  
 3. **Country Data**: No standardization applied (e.g., "UK" vs. "United Kingdom").  
 
---- 
-
-Let me know if you'd like this exported as a PDF! 📄  
