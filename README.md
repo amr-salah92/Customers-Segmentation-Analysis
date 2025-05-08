@@ -52,12 +52,16 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 ## Data Structure & Initial Checks  
 **Main Table**: `df` (540k rows × 8 columns)  
 
-| Column         | Description                           | Key Insights                          |  
-|----------------|---------------------------------------|---------------------------------------|  
-| `InvoiceNo`    | Transaction identifier                | 28k unique invoices                   |  
-| `CustomerID`   | Anonymized customer identifier        | 37k unique customers (25% missing)    |  
-| `Quantity`     | Units sold                            | Filtered to positive values only      |  
-| `UnitPrice`    | Price per unit                        | Removed zero/negative entries         |  
+| Column        | Description                      | Key Insights                                  |
+| ------------- | -------------------------------- | --------------------------------------------- |
+| `InvoiceNo`   | Transaction identifier           | 28k unique invoices                           |
+| `StockCode`   | Product identifier               | Includes both physical products and services  |
+| `Description` | Product name or description      | Some missing or ambiguous values              |
+| `Quantity`    | Units sold                       | Filtered to positive values only              |
+| `InvoiceDate` | Date and time of the transaction | Used to calculate Recency for RFM             |
+| `UnitPrice`   | Price per unit                   | Zero and negative prices removed              |
+| `CustomerID`  | Anonymized customer identifier   | 37k unique IDs, \~25% missing entries dropped |
+| `Country`     | Customer's country of residence  | 38 countries; UK dominates with \~80% of data |
 
 ---
 
