@@ -135,7 +135,9 @@ The dataset belongs to a **UK-based online retailer** operating between **01/12/
 ## Executive Summary *(For a Marketing Manager)*  
 1. **Top 10% of Customers** drive **50% of revenue** — prioritize retention.  
 2. **40% of Customers** are inactive — launch reactivation campaigns.  
-3. **Germany** shows untapped potential with higher average order value.  
+3. **Germany** shows untapped potential with higher average order value.
+4. November & December sales spiked by 45%, driven by holiday gifting (e.g., low-cost gifts like novelty toys and décor).
+5. Identified 20% of customers driving 80% of revenue using RFM (Recency, Frequency, Monetary) analysis and clustering algorithms.
 
 ---
 
